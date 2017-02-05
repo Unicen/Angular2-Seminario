@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./beer-list.component.css']
 })
 export class BeerListComponent implements OnInit {
-
+beer = {
+  name: "Negra Fuerte",
+  style: "Porter",
+  price: 20,
+  stock: 1584
+}
   constructor() { }
 
   ngOnInit() {
