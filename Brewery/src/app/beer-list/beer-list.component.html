@@ -6,6 +6,7 @@
       <th>Tipo</th>
       <th>Precio</th>
       <th>Stock</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,17 @@
       <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>
       <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
       <td *ngIf="beer.stock==0"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      <td>
+         <div class="form-group">
+            <button type="button" class="btn btn-default btn-xs" (click)="downQuantity(beer)">
+                <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>            
+            <span>{{beer.quantity}}</span>
+            <button type="button" class="btn btn-default btn-xs" (click)="upQuantity(beer)">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+      </td> 
     </tr>
   </tbody>
 </table>

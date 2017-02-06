@@ -15,5 +15,13 @@ beers : Beer[];
   ngOnInit() {
     this.beers = BEERS;
   }
+  
+  upQuantity(beer){
+    if(beer.quantity <= beer.stock && beer.stock != 0) beer.quantity++;
+  }
+  
+  downQuantity(beer){
+    if(beer.quantity != 0) beer.quantity--;
+  }
 
 }
