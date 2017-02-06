@@ -22,7 +22,7 @@ beers = [{
   name: "La Rubia",
   style: "Golden Ale",
   price: 23.5,
-  stock: 121
+  stock: 0
 }]
 
   constructor() { }
