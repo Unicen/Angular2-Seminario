@@ -8,7 +8,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr *ngFor="let beer of beers">
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
       <td>{{beer.price}}</td>
