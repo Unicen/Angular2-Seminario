@@ -4,4 +4,5 @@ export class Beer {
   price: number;
   stock: number;
   image: string;
+  clearance: boolean;
 }
