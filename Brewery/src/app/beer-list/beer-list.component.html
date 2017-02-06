@@ -11,7 +11,7 @@
     <tr *ngFor="let beer of beers">
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
-      <td>{{beer.price}}</td>
+      <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>
       <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
       <td *ngIf="beer.stock==0"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
     </tr>
