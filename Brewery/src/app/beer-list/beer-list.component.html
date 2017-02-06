@@ -1,6 +1,7 @@
 <table class="table table-striped">
   <thead> 
     <tr>
+      <th></th>
       <th>Nombre</th>
       <th>Tipo</th>
       <th>Precio</th>
@@ -9,6 +10,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let beer of beers">
+      <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
       <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>

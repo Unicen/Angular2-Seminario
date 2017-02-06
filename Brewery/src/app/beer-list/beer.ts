@@ -3,4 +3,5 @@ export class Beer {
   style: string;
   price: number;
   stock: number;
+  image: string;
 }
