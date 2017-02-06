@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from './beer';
 
 @Component({
   selector: 'beer-list',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./beer-list.component.css']
 })
 export class BeerListComponent implements OnInit {
-beers = [{
+beers : Beer[] = [{
   name: "Negra Fuerte",
   style: "Porter",
   price: 20,
