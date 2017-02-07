@@ -10,11 +10,10 @@ import { BeerDataService } from '../beer-data.service';
 export class BeerListComponent implements OnInit {
 beers : Beer[];
 
-  constructor() { }
+  constructor(private beerDataService : BeerDataService) { }
 
   ngOnInit() {
-    let beerdataservice = new BeerDataService();
-    this.beers = beerdataservice.getBeers();
+    this.beers = this.beerDataService.getBeers();
   }
   
   upQuantity(beer){
