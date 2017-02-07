@@ -23,4 +23,16 @@ beers : Beer[];
   downQuantity(beer){
     if(beer.quantity != 0) beer.quantity--;
   }
+
+  verifyBeerQuantity(beer){
+    if(beer.quantity > beer.stock) {
+      alert("No hay suficientes cervezas en stock");
+    }
+    if(beer.quantity < 0) {
+      alert("No se pueden encargar cervezas negativas ");
+    }
+    beer.quantity = 0;
+  }
+  
+
 }

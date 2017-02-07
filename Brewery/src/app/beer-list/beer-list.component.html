@@ -22,7 +22,7 @@
             <button type="button" class="btn btn-default btn-xs" (click)="downQuantity(beer)">
                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
             </button>            
-            <input class="smallInput" type="number" [(ngModel)]="beer.quantity"/>
+            <input class="smallInput" type="number" [(ngModel)]="beer.quantity" (focusout)="verifyBeerQuantity(beer)"/>
             <button type="button" class="btn btn-default btn-xs" (click)="upQuantity(beer)">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
