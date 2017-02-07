@@ -23,5 +23,4 @@ beers : Beer[];
   downQuantity(beer){
     if(beer.quantity != 0) beer.quantity--;
   }
-
 }
