@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
-import { BEERS } from './mocks';
+import { BeerDataService } from '../beer-data.service';
 
 @Component({
   selector: 'beer-list',
@@ -13,7 +13,8 @@ beers : Beer[];
   constructor() { }
 
   ngOnInit() {
-    this.beers = BEERS;
+    let beerdataservice = new BeerDataService();
+    this.beers = beerdataservice.getBeers();
   }
   
   upQuantity(beer){
