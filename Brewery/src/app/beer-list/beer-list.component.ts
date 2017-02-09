@@ -13,7 +13,7 @@ beers : Beer[];
   constructor(private beerDataService : BeerDataService) { }
 
   ngOnInit() {
-    this.beers = this.beerDataService.getBeers();
+    this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
   }
   
   upQuantity(beer){
