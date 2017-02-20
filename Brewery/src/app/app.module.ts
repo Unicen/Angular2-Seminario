@@ -9,12 +9,14 @@ import { BeerListComponent } from './beer-list/beer-list.component';
 import { BeerDataService } from './beer-data.service';
 import { appRoutes } from './app.routes';
 import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerListComponent,
-    AboutComponent
+    AboutComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
