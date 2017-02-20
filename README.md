@@ -27,6 +27,10 @@ Este curso es una introducción al desarrollo de Single Page Applications usando
 * [Slides](https://docs.google.com/presentation/d/1qkRcDKGSy13aoRIlwgL9eYQmYMIjKOvO1mhCjSaT3OE/edit?usp=sharing)
 * [Code](https://github.com/Unicen/Angular2-Seminario/tree/06_ServicesDependencyInjection)
 
-### 07 - Routing & Comunicacion entre componentes
+### 07 - Routing
 * [Slides]()
-* [Code]()
+* [Code](https://github.com/Unicen/Angular2-Seminario/tree/07_Routing)
+
+### 08 - Comunicacion entre componentes
+* [Slides]()
+* [Code](https://github.com/Unicen/Angular2-Seminario/tree/08_CommunicationBetweenComponents)
