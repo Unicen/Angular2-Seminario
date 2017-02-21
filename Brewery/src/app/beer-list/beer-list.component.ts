@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from './beer';
+import { BEERS } from './mocks';
 
 @Component({
   selector: 'beer-list',
@@ -6,16 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./beer-list.component.css']
 })
 export class BeerListComponent implements OnInit {
+beers : Beer[];
 
-  beer = {
-    "name":"Guinness",
-    "style": "Stout",
-    "price": 200,
-    "stock": 50
-  }
   constructor() { }
 
   ngOnInit() {
+    this.beers = BEERS;
   }
 
 }
