@@ -9,21 +9,13 @@ import {CartService} from "../cart.service";
 export class CartComponent implements OnInit {
 
   beers = [];
-  /*[{
-   "name":"Negra Fuerte",
-   "amount": 8,
-   "price": 20
-   },{
-   "name":"Red Red Wine",
-   "amount": 3,
-   "price": 40
-   }]
-   */
 
   constructor(private cartService: CartService) {
   }
 
   ngOnInit() {
+
+    // Subscribe to cartService changes
     this.cartService.items.subscribe(data => {
       this.beers = data;
     });
@@ -38,4 +30,5 @@ export class CartComponent implements OnInit {
     this.beers.forEach(beer => total += this.totalPrice(beer));
     return total
   }
+
 }
