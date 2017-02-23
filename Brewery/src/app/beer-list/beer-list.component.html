@@ -1,5 +1,5 @@
 <table class="table table-striped">
-  <thead> 
+  <thead>
     <tr>
       <th></th>
       <th>Nombre</th>
@@ -22,7 +22,7 @@
          <div class="form-group">
             <button type="button" class="btn btn-default btn-xs" (click)="downQuantity(beer)">
                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-            </button>            
+            </button>
             <input class="smallInput" type="number" [(ngModel)]="beer.quantity" (focusout)="verifyBeerQuantity(beer)"/>
             <button type="button" class="btn btn-default btn-xs" (click)="upQuantity(beer)">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -30,7 +30,7 @@
           </div>
       </td>
       <td>
-        <button type="button" class="btn btn-default btn-xs">
+        <button type="button" class="btn btn-default btn-xs" [disabled]="beer.quantity <= 0" (click)="addCart(beer)">
           <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Comprar
         </button>
       </td>

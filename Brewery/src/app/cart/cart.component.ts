@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from "@angular/core";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'beer-cart',
@@ -7,27 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  beers = [{
-    "name":"Negra Fuerte",
-    "amount": 8,
-    "price": 20
-  },{
-    "name":"Red Red Wine",
-    "amount": 3,
-    "price": 40
-  }]
-  constructor() { }
+  beers = [];
+  /*[{
+   "name":"Negra Fuerte",
+   "amount": 8,
+   "price": 20
+   },{
+   "name":"Red Red Wine",
+   "amount": 3,
+   "price": 40
+   }]
+   */
+
+  constructor(private cartService: CartService) {
+  }
 
   ngOnInit() {
-  }
-  
-  totalPrice(beer){
-    return beer.price*beer.amount;
+    this.cartService.items.subscribe(data => {
+      this.beers = data;
+    });
   }
 
-  total(){
-    let total=0
-    this.beers.forEach(beer => total += this.totalPrice(beer)) 
-    return total 
+  totalPrice(beer) {
+    return beer.price * beer.quantity;
+  }
+
+  total() {
+    let total = 0;
+    this.beers.forEach(beer => total += this.totalPrice(beer));
+    return total
   }
 }
