@@ -43,17 +43,3 @@ export class CartService {
   }
 
 }
-
-/*
-private _list: Product[] = [];
-private _listSubject: BehaviorSubject<Product[]> = new BehaviorSubject(this._list);
-public list: Observable<Product[]> = this._listSubject.asObservable();
-
-addItem(item: Product): void {
-  this._list.push(item);
-this._listSubject.next(this._list);
-}
-
-getItems(): any {
-  return this._list;
-}*/
