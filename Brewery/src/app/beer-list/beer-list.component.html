@@ -16,7 +16,7 @@
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
       <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>
-      <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+      <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true"  data-toggle="tooltip" data-placement="right" title="{{beer.stock}}"  ></span></td>
       <td *ngIf="beer.stock==0"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
       <td>
          <div class="form-group">
