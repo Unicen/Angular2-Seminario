@@ -20,7 +20,7 @@ beers : Beer[];
   }
 
   upQuantity(beer){
-    if(beer.quantity <= beer.stock && beer.stock != 0) beer.quantity++;
+    if(beer.quantity < beer.stock && beer.stock != 0) beer.quantity++;
   }
 
   downQuantity(beer){
@@ -39,6 +39,7 @@ beers : Beer[];
 
   addCart(beer: Beer) {
     this.cartService.addToCart(beer);
+    beer.stock -= beer.quantity;
   }
 
 }
