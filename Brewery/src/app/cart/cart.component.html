@@ -2,18 +2,17 @@
  <div class="panel-heading">Carrito de la Felicidad</div>
   <div class="panel-body">
     <table class="table table-striped">
-      <thead> 
+      <thead>
         <tr>
           <th>Cerveza</th>
           <th>Cantidad</th>
           <th>Total</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let beer of beers" >
           <td>{{beer.name}}</td>
-          <td >{{beer.amount}}</td>
+          <td >{{beer.quantity}}</td>
           <td>{{totalPrice(beer)| currency:'USD':true:'1.2-2'}}</td>
         </tr>
       </tbody>
