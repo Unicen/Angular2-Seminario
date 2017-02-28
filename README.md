@@ -2,7 +2,12 @@
 Este es el repositorio del Seminario de Angular para la Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas (TUDAI).
 Este curso es una introducción al desarrollo de Single Page Applications usando Angular 2.
 
-## Slides && Branches
+## Docentes
+* [Nicolas Tourne](https://twitter.com/nicotourne)
+* [Ignacio Jonas](https://about.me/ignaciojonas)
+* [Javier Dottori]()
+
+## Slides & Branches
 ### 01 - Introducción
 * [Slides](https://docs.google.com/presentation/d/1_Zm9ZlUYcz9kNVSzgtaryKhXnuSWzvyO3RVe3QEK2ks/edit?usp=sharing)
 * [Code](https://github.com/Unicen/Angular2-Seminario/tree/01_Intro)
@@ -28,9 +33,9 @@ Este curso es una introducción al desarrollo de Single Page Applications usando
 * [Code](https://github.com/Unicen/Angular2-Seminario/tree/06_ServicesDependencyInjection)
 
 ### 07 - Routing
-* [Slides]()
+* [Slides](https://docs.google.com/presentation/d/10u4OlxhFj-4SqLKXfFeBJvKdf5KN2tr0pCtFK5euDVA/edit?usp=sharing)
 * [Code](https://github.com/Unicen/Angular2-Seminario/tree/07_Routing)
 
 ### 08 - Comunicacion entre componentes
-* [Slides]()
+* [Slides](https://docs.google.com/presentation/d/1g__35jk7ggIlUvdAl5rWAEo5Ktyznhx6u-bo3d-Lb98/edit?usp=sharing)
 * [Code](https://github.com/Unicen/Angular2-Seminario/tree/08_CommunicationBetweenComponents)
