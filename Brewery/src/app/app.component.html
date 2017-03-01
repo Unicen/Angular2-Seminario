@@ -1,12 +1,15 @@
 <div class="container">
     <div class="row">
       <div class="col-sm-2 well resaltar">Logo</div>
-      <div class="col-sm-10 well">Menu</div>
+      <div class="col-sm-10 well">
+        <a routerLink="/">Home</a>
+        <a routerLink="/about">About</a>
+        </div>
     </div>
   <div class="row">
     <div class="col-sm-8">
       Lista de Cervezas
-      <beer-list>Loading Beers!!!.. Hold on :)</beer-list>
+      <router-outlet></router-outlet>
     </div>
     <div class="col-sm-4 well">Carrito</div>
   </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
-import { BEERS } from './mocks';
+import { BeerDataService } from '../beer-data.service';
 
 @Component({
   selector: 'beer-list',
@@ -10,10 +10,28 @@ import { BEERS } from './mocks';
 export class BeerListComponent implements OnInit {
 beers : Beer[];
 
-  constructor() { }
+  constructor(private beerDataService : BeerDataService) { }
 
   ngOnInit() {
-    this.beers = BEERS;
+    this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
+  }
+
+  upQuantity(beer){
+    if(beer.quantity < beer.stock)
+      beer.quantity++;
+  }
+  downQuantity(beer){
+    if(beer.quantity>0)
+      beer.quantity--;
+  }
+  checkQuantity(beer){
+    if(beer.quantity > beer.stock){
+      beer.quantity = beer.stock;
+    }
+
+    if(beer.quantity  < 0){
+      beer.quantity = 0;
+    }
   }
 
 }

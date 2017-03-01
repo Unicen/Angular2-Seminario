@@ -16,6 +16,11 @@
       <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>
       <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
       <td *ngIf="beer.stock==0"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      <td> 
+        <button (click)="downQuantity(beer)">-</button>  
+        <input type="number" [(ngModel)]="beer.quantity" max="{{beer.stock}}" min="0" (keyup)="checkQuantity(beer)"/>
+        <button (click)="upQuantity(beer)">+</button>
+      </td>
     </tr>
   </tbody>
 </table>
