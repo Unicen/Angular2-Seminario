@@ -21,6 +21,8 @@
         <input type="number" [(ngModel)]="beer.quantity" max="{{beer.stock}}" min="0" (keyup)="checkQuantity(beer)"/>
         <button (click)="upQuantity(beer)">+</button>
       </td>
+      <td><button class="btn glyphicon glyphicon-shopping-cart" aria-hidden="true" [disabled]="beer.stock == 0" (click)="addToCart(beer)"></button></td>
+      
     </tr>
   </tbody>
 </table>

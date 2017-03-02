@@ -1,0 +1,15 @@
+<table class="table table-striped">
+  <thead>
+    <th>Producto</th> 
+    <th>Cantidad</th> 
+    <th>Total</th> 
+  </thead>
+  <tbody>
+    <tr *ngFor="let beer of beers">
+      <td>{{beer.name}}</td>
+      <td>{{beer.quantity}}</td>
+      <td>{{beer.quantity * beer.price| currency:'USD':true:'1.2-2'}}</td>
+    </tr> 
+  </tbody>
+</table>
+<h3>Total: {{getTotal()| currency:'USD':true:'1.2-2'}}</h3>

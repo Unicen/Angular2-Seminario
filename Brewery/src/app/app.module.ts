@@ -7,15 +7,18 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { BeerDataService } from './beer-data.service';
+import { ServiceCartService } from './service-cart.service';
 import { BeerAboutComponent } from './beer-about/beer-about.component';
 
-import { appRoutes } from './app.routes'
+import { appRoutes } from './app.routes';
+import { BeerCartComponent } from './beer-cart/beer-cart.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerListComponent,
-    BeerAboutComponent
+    BeerAboutComponent,
+    BeerCartComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { appRoutes } from './app.routes'
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [BeerDataService],
+  providers: [BeerDataService, ServiceCartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

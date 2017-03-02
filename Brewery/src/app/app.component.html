@@ -2,16 +2,17 @@
     <div class="row">
       <div class="col-sm-2 well resaltar">Logo</div>
       <div class="col-sm-10 well">
-        <a routerLink="/">Home</a>
-        <a routerLink="/about">About</a>
+        <a routerLink="/" routerLinkActive="resaltar">Home</a>
+        <a routerLink="/about" routerLinkActive="resaltar">About</a>
         </div>
     </div>
   <div class="row">
     <div class="col-sm-8">
-      Lista de Cervezas
       <router-outlet></router-outlet>
     </div>
-    <div class="col-sm-4 well">Carrito</div>
+    <div class="col-sm-4 well">
+      <beer-cart></beer-cart>
+    </div>
   </div>
   <div class="row">
     <div class="col-sm-12 well">Footer</div>
