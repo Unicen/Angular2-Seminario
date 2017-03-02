@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BeerDataService } from '../beer-data.service';
 
 @Component({
     selector: 'beer-list',
@@ -7,48 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeerListComponent implements OnInit {
     tableHead = {
-        'name' : 'Nombre',
-        'style' : 'Estilo',
-        'price' : 'Precio',
-        'stock' : 'Stock'
-    }
+        'name': 'Nombre',
+        'style': 'Estilo',
+        'price': 'Precio',
+        'stock': 'Stock',
+        'quantity': 'Cantidad'
+    };
 
-    beers = [
-        {
-            'name': 'Guinness',
-            'style': 'Porter',
-            'price': 32,
-            'specialPrice' : null,
-            'stock': 20
-        },
-        {
-            'name': 'Guinness',
-            'style': 'Porter',
-            'price': 546,
-            'specialPrice' : 200,
-            'stock': 11
-        },      
-        {
-            'name': 'Guinness',
-            'style': 'Porter',
-            'price': 565,
-            'specialPrice' : null,
-            'stock': 220
-        },
-        {
-            'name': 'Guinness',
-            'style': 'Porter',
-            'price': 89,
-            'specialPrice' : null,
-            'stock': 246
-        }
-    ];
-    
-    
-    constructor() { }
+    beers = [];
+
+    constructor(private beerDataService: BeerDataService) {
+    }
 
     ngOnInit() {
-        
+        this.beerDataService.getBeers().subscribe(beers => this.beers = beers);
     }
 
+    upQuantity(beer) {
+        if (beer.quantity < beer.stock)
+            beer.quantity++;
+    };
+
+    downQuantity(beer) {
+        if (beer.quantity > 0)
+            beer.quantity--;
+    };
 }

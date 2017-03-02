@@ -1,0 +1,172 @@
+//[ ------ ------
+//[ Fonts
+//[ ------ ------
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Playfair+Display:400,400i,700,700i,900,900i');
+
+$sans-font-family: Arial, Helvetica, sans-serif;
+$serif-font-family: Georgia, Times, 'Times New Roman', serif;
+
+$f-novo-family: "Noto Sans", $sans-font-family;
+$f-playfair-family: "Playfair Display", $serif-font-family;
+
+$f-novo-regular: 400;
+$f-novo-bold: 700;
+
+$f-play-regular: 400;
+$f-play-bold: 700;
+$f-play-black: 900;
+
+//[ ------ ------
+//[ Colours
+//[ ------ ------
+$black: #000;
+$white: #FFF;
+$brown: #bfb68d;
+$grey: #edecec;
+$grey-2: #a9a8a8;
+
+//[ ------ ------
+//[ Size
+//[ ------ ------
+$page-size: 1000px;
+$page-padding-width: 20px;
+
+$bp-phone:480px;
+
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr th {
+        font-family: $f-playfair-family;
+        font-size: 15px;
+        font-weight: $f-play-bold;
+        text-align: left;
+        line-height: 38px;
+
+        &:last-child {
+            text-align: center;
+        }
+    }
+
+    tbody tr {
+        height: 160px;
+
+        td {
+            font-family: $f-novo-family;
+            font-size: 14px;
+            font-style: italic;
+
+            &.beer-image {
+                position: relative;
+
+                div {
+                    display: none;
+                }
+
+                &:hover {
+                    div {
+                        background-color: $brown;
+                        border-radius: 50%;
+                        content: 'glu,glu.. ¡ahhh!';
+                        color: $grey;
+                        display: block;
+                        left: 150px;
+                        top: -30px;
+                        padding: 10px;
+                        position: absolute;
+                        width: 90px;
+
+                        @media (max-width: $bp-phone) {
+                            display: none;
+                        }
+
+                        &:after {
+                            content: '';
+                            border-top: 5px solid $brown;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            bottom: 12px;
+                            left: 0px;
+                            position: absolute;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                text-align: center;
+            }
+
+            &:last-child {
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            .has-special-price {
+                color: $grey-2;
+                text-decoration: line-through;
+            }
+
+            .special-price {
+                font-size: 15px;
+                margin-left: 5px;
+            }
+
+            img {
+                position: relative;
+                max-height: 100px;
+                max-width: 100px;
+                z-index: 1;
+
+                @media (max-width: $bp-phone) {
+                    max-height: 50px;
+                    max-width: 50px;
+                }
+            }
+
+            button {
+                border: 1px solid $grey-2;
+                color: $white;
+                cursor: pointer;
+                font-size: 15px;
+                padding-bottom: 1px;
+                width: 21px;
+
+            }
+
+            input {
+                border: 1px solid $grey-2;
+                font-family: $f-novo-family;
+                font-size: 14px;
+                line-height: 21px;
+                max-width: 15px;
+                padding: 0 5px;
+                text-align: center;
+                user-select: none;
+            }
+
+        }
+    }
+
+    @media (max-width: $bp-phone) {
+        tr th:nth-child(3),tr td:nth-child(3) {
+            display: none;
+        }
+
+        tr {
+            height: 90px;
+
+            th, td {
+                text-align: center;
+            }
+        }
+    }
+
+
+}
+
