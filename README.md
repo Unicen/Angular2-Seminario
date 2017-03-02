@@ -39,3 +39,6 @@ Este curso es una introducción al desarrollo de Single Page Applications usando
 ### 08 - Comunicacion entre componentes
 * [Slides](https://docs.google.com/presentation/d/1g__35jk7ggIlUvdAl5rWAEo5Ktyznhx6u-bo3d-Lb98/edit?usp=sharing)
 * [Code](https://github.com/Unicen/Angular2-Seminario/tree/08_CommunicationBetweenComponents)
+
+##Trabajo Final
+*[Consigna](https://docs.google.com/document/d/11ZEeVvf1n37qCO13aRqEjJDzejOsOWcKBhptKzrwlnI/edit?usp=sharing)
