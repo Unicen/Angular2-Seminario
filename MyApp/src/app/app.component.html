@@ -1,0 +1,33 @@
+
+<header>
+    <div class="header-container">
+        <div class="menu"></div>
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
+        <div class="cart-container">
+            <div class="cart"></div>
+            <div class="mini-cart">
+              <beer-cart></beer-cart>
+            </div>
+        </div>
+    </div>
+    <nav class="nav">
+        <div class="close">X</div>
+        <ul>
+            <li *ngFor="let navItem of nav">{{navItem}}</li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="list-container">
+        <beer-list></beer-list>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="copyright"></div>
+    </div>
+</footer>

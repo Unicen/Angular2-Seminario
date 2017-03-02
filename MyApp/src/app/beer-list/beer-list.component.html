@@ -1,0 +1,23 @@
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>{{tableHead.name}}</th>
+            <th>{{tableHead.style}}</th>
+            <th>{{tableHead.price}}</th>
+            <th>{{tableHead.stock}}</th>
+            <th>{{tableHead.quantity}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let beer of beers">
+            <td class="beer-image"><div>glu,glu.. ¡ahhh!</div><img src="{{beer.image}}" alt="{{beer.name}}"/> </td>
+            <td>{{beer.name}}</td>
+            <td>{{beer.style}}</td>
+            <td><span [class.has-special-price]="beer.specialPrice != null">{{beer.price | currency:'USD':true:'.2-2'}}</span> <span *ngIf="beer.specialPrice != null" [class.special-price]="beer.specialPrice != null">{{beer.specialPrice | currency:'USD':true:'.2-2'}}</span></td>
+            <td>{{beer.stock}}</td>
+            <td><button (click)="downQuantity(beer)">-</button> <input [(ngModel)]="beer.quantity" disabled="disabled"/> <button (click)="upQuantity(beer)">+</button></td>
+        </tr>
+    </tbody>
+</table>

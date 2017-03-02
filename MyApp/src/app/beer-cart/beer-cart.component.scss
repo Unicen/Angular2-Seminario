@@ -1,0 +1,38 @@
+//[ ------ ------
+//[ Fonts
+//[ ------ ------
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Playfair+Display:400,400i,700,700i,900,900i');
+
+$sans-font-family: Arial, Helvetica, sans-serif;
+$serif-font-family: Georgia, Times, 'Times New Roman', serif;
+
+$f-novo-family: "Noto Sans", $sans-font-family;
+$f-playfair-family: "Playfair Display", $serif-font-family;
+
+$f-novo-regular: 400;
+$f-novo-bold: 700;
+
+$f-play-regular: 400;
+$f-play-bold: 700;
+$f-play-black: 900;
+
+//[ ------ ------
+//[ Colours
+//[ ------ ------
+$black: #000;
+$white: #FFF;
+$brown: #bfb68d;
+$grey: #edecec;
+$grey-2: #a9a8a8;
+
+//[ ------ ------
+//[ Size
+//[ ------ ------
+$page-size: 1000px;
+$page-padding-width: 20px;
+
+$bp-phone:480px;
+
+p {
+  color: $black;
+}

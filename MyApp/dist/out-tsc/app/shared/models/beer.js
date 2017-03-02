@@ -1,0 +1,1 @@
+//# sourceMappingURL=/Users/sebastiangonzalez/Documents/Angular2-Seminario/MyApp/src/app/shared/models/beer.js.map
