@@ -1,0 +1,1 @@
+http://dataservice.accuweather.com/forecasts/v1/daily/1day/2929?apikey=OIaLs7W3frFbiPYk8GGBR2w6f5zbr3UG&language=es-AR&details=false&metric=true
