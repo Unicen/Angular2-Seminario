@@ -9,6 +9,7 @@ import {CartService} from "../cart.service";
 export class CartComponent implements OnInit {
 
   beers = [];
+  mensaje = '';
 
   constructor(private cartService: CartService) {
   }
@@ -29,6 +30,18 @@ export class CartComponent implements OnInit {
     let total = 0;
     this.beers.forEach(beer => total += this.totalPrice(beer));
     return total
+  }
+
+  cartToServer(cart){
+    if(this.beers.length > 0){
+      this.cartService.cartToServer(cart).subscribe(()=>{
+        this.beers = [];
+        this.mensaje = "Carrito guardado con exito";
+      });
+    };
+    if(this.beers.length<=0){
+      this.mensaje = "El carrito esta vacio";
+    }
   }
 
 }

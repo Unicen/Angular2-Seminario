@@ -14,7 +14,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a routerLink="/" routerLinkActive="active">Cervezas</a>
-            <li><a routerLink="/about" routerLinkActive="active">Contactenos</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">Acerca de Nosotros</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contactanos</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -25,10 +26,15 @@
   <div class="col-md-8">
     <router-outlet></router-outlet>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 well">
+    <app-currency-rate></app-currency-rate>
+  </div>
+  <div class="col-md-4 well">
     <beer-cart></beer-cart>
   </div>
-</div>
+    <div class="col-md-4 well">
+    <app-weather></app-weather>
+  </div>
 <div class="row">
   <div class="col-md-12 text-center">Todos los derechos reservados <strong>Brewery Inc.®</strong></div>
 </div>
