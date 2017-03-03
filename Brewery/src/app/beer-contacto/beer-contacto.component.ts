@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BeerContactoService } from '../beer-contacto.service';
 
 @Component({
   selector: 'beer-contacto',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeerContactoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contactoService: BeerContactoService) { }
 
   ngOnInit() {
   }
@@ -16,6 +17,12 @@ export class BeerContactoComponent implements OnInit {
     console.log(email);
     console.log(subjet);
     console.log(message);
+    var json = {
+      email:email,
+      subjet:subjet,
+      message:message
+    }
+    this.contactoService.postFormData(json).subscribe(res => alert(res));
   }
 
 }

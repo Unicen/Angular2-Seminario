@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {CartService} from "../cart.service";
+import { Component, OnInit } from "@angular/core";
+import { CartService } from "../cart.service";
 
 @Component({
   selector: 'beer-cart',
@@ -30,5 +30,8 @@ export class CartComponent implements OnInit {
     this.beers.forEach(beer => total += this.totalPrice(beer));
     return total
   }
-
+  comprar(beers,totalCarro) {
+    console.log(totalCarro);
+    console.log(beers);
+  }
 }
