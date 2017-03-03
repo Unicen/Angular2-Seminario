@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
 import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
-
+import { SearchService } from '../search.service';
 
 
 @Component({
@@ -12,11 +12,13 @@ import { CartService } from '../cart.service';
 })
 export class BeerListComponent implements OnInit {
 beers : Beer[];
+filter : string;
 
-  constructor(private beerDataService : BeerDataService, private cartService: CartService) { }
+  constructor(private beerDataService : BeerDataService, private cartService: CartService, private searchService: SearchService) { }
 
   ngOnInit() {
     this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
+    this.searchService.word.subscribe(word => this.filter=word);
   }
 
   upQuantity(beer){
