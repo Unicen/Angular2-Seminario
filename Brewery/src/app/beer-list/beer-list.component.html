@@ -1,3 +1,13 @@
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="filter"  placeholder="Search for...">
+     <!--  <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>-->
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
 <table class="table table-striped">
   <thead>
     <tr>
@@ -11,7 +21,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
+    <tr *ngFor="let beer of (beers | filterbeer: filter) " [class.clearance]="beer.clearance" >
       <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
