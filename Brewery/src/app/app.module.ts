@@ -18,6 +18,8 @@ import { BeerWeatherComponent } from './beer-weather/beer-weather.component';
 import { BeerComponent } from './beer/beer.component';
 import { BeerWeatherDataService } from './beer-weather-data.service';
 import { BeerContactoComponent } from './beer-contacto/beer-contacto.component';
+import { BeerContactoService } from './beer-contacto.service';
+
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import { BeerContactoComponent } from './beer-contacto/beer-contacto.component';
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ BeerDataService, CartService, BeerWeatherDataService ],
+  providers: [ BeerDataService, CartService, BeerWeatherDataService, BeerContactoService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
