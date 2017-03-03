@@ -9,8 +9,8 @@ export class BeerDataService {
   constructor(private http: Http) { }
 
   getBeers(){
-    return this.http.get('https://brewery-angular.firebaseio.com/beers.json')
-                    .map(response => 
+    return this.http.get('https://brewery-e16d8.firebaseio.com/beers.json')
+                    .map(response =>
                     {
                       let beers = response.json();
                       return <Beer[]>Object.keys(beers).map(key => Object.assign({ key }, beers[key]));

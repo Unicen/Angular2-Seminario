@@ -1,35 +1,35 @@
 <div class="container">
   <div class="row">
-  <div class="col-md-12">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <img alt="Brewery" src="assets/logo.png">
-          </a>
-        </div>
+    <div class="col-md-12">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img alt="Brewery" src="assets/logo.png">
+            </a>
+          </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a routerLink="/" routerLinkActive="active">Cervezas</a>
-            <li><a routerLink="/about" routerLinkActive="active">Contactenos</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a routerLink="/" routerLinkActive="active">Cervezas</a>
+              <li><a routerLink="/about" routerLinkActive="active">Contactenos</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-8">
-    <router-outlet></router-outlet>
+  <div class="row">
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4">
+      <beer-cart></beer-cart>
+    </div>
   </div>
-  <div class="col-md-4">
-    <beer-cart></beer-cart>
+  <div class="row">
+    <div class="col-md-12 text-center">Todos los derechos reservados <strong>Brewery Inc.®</strong></div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-12 text-center">Todos los derechos reservados <strong>Brewery Inc.®</strong></div>
-</div>
 </div>

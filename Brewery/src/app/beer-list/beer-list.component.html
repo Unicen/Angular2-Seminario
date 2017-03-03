@@ -1,3 +1,5 @@
+<input type="text" class="form-inline form-control" placeholder="Buscar cerveza.." [(ngModel)]="bName">
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -11,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
+    <tr tr *ngFor="let beer of beers | filterPipe:bName" [class.clearance]="beer.clearance" >
       <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
