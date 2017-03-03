@@ -19,11 +19,9 @@ export class BeerContactoService {
                 // Allow the X-Pagination-Current-Page header to be exposed to the browser.
                 'Access-Control-Expose-Headers' => ['X-Pagination-Current-Page'],
     */
-   
-    return this.http.post('https://contacto-brewery.firebaseio.com/contacto.json', json);
+
+    return this.http.post('https://contacto-brewery.firebaseio.com/contact.json', json);
 
   }
 
 }
-
-
