@@ -38,10 +38,13 @@ export class CartComponent implements OnInit {
         this.beers = [];
         this.mensaje = "Carrito guardado con exito";
       });
+
     };
     if(this.beers.length<=0){
       this.mensaje = "El carrito esta vacio";
     }
+
+
   }
 
 }
