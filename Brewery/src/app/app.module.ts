@@ -7,12 +7,13 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
 import { BeerDataService } from './beer-data.service';
+import { WeatherDataService} from './weather-data.service'
 import { CartService } from './cart.service';
 import { appRoutes } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
 import { filterPipe } from './filter.pipe';
-import { WheatherComponent } from './wheather/wheather.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { WheatherComponent } from './wheather/wheather.component';
     AboutComponent,
     CartComponent,
     filterPipe,
-    WheatherComponent
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +30,7 @@ import { WheatherComponent } from './wheather/wheather.component';
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ BeerDataService, CartService ],
+  providers: [ BeerDataService, CartService , WeatherDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
