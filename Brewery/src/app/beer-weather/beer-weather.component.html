@@ -1,0 +1,28 @@
+<ul *ngIf="weather">
+  <li>
+    {{weather.Date}}
+  </li>
+  <li>
+    {{weather.Categoria}}
+  </li>
+  <li>
+    {{weather.Text}}
+  </li>
+  <li>
+    {{weather.Day}}
+  </li>
+  <li>
+    {{weather.Night}}
+  </li>
+  <li>
+    {{weather.TempMin}}
+  </li>
+  <li>
+    {{weather.TempMax}}
+  </li>
+</ul>
+
+<button type="button" class="btn btn-default btn-xs" (click)="consola(weather)">
+  <span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+  <span>Console.Log(weather);</span>
+</button>
