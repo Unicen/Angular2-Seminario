@@ -10,12 +10,11 @@ export class WeatherComponent implements OnInit {
 
   constructor(private weatherService : WeatherService) { }
 
-  public wheaterData;
+  public weatherData : any[];
 
   ngOnInit() {
-    // this.weatherService.getBeers().subscribe(data => this.wheaterData=data);
-    // console.log(this.wheaterData);
-    
+    this.weatherService.getWeather().subscribe(data => this.weatherData=data);
+
   }
 
 

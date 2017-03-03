@@ -1,0 +1,17 @@
+<h2> Formulario de Contacto </h2>
+ <form  [formGroup]="loginForm" (ngSubmit)="doLogin($event)" class="contacto">
+
+  <div class="form-group"><label for="name">Nombre:</label>
+                
+                 
+  <input type="name"  formControlName="name" required class="form-control" placeholder="Nombre"> 
+  </div>
+  <div class="form-group"><label for="email">Email:</label>
+                    
+
+     
+  <input  formControlName="email"  type="email" class="form-control" placeholder="mail@ejemplo.com" required> 
+  </div>
+  <div class="form-group"><label for="consulta">Su consulta</label> <textarea formControlName="consulta" name="consulta" class="form-control" rows="3" placeholder="Escriba su consulta aqui..." required></textarea></div>
+  <button type="submit" class="btn btn-default">Enviar</button>
+  </form>
