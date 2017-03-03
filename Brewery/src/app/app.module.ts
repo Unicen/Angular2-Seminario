@@ -17,6 +17,7 @@ import { BeerNameFilter } from './pipes/name-pipe';
 import { BeerWeatherComponent } from './beer-weather/beer-weather.component';
 import { BeerComponent } from './beer/beer.component';
 import { BeerWeatherDataService } from './beer-weather-data.service';
+import { BeerContactoComponent } from './beer-contacto/beer-contacto.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BeerWeatherDataService } from './beer-weather-data.service';
     CartComponent,
     BeerNameFilter,
     BeerWeatherComponent,
-    BeerComponent
+    BeerComponent,
+    BeerContactoComponent
   ],
   imports: [
     BrowserModule,
