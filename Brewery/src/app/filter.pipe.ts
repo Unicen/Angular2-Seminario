@@ -1,16 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+    name: 'filterPipe',
 })
-
-export class FilterPipe implements PipeTransform {
-
-  transform(beers: any, term: any): any {
+export class filterPipe implements PipeTransform {
+    transform(beers: any, term: any): any {
     if (term === undefined) return beers;
     return beers.filter(function(beer){
       return beer.name.toLowerCase().includes(term.toLowerCase());
     })
   }
-
 }
