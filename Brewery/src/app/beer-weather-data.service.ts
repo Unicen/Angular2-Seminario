@@ -13,7 +13,18 @@ export class BeerWeatherDataService {
                     .map(response =>
                     {
                       let weatherThings = response.json();
-                      return <WeatherThings[]>Object.keys(weatherThings).map(key => Object.assign({ key }, weatherThings[key]));
+                      // console.log(weatherThings['DailyForecasts'][0]['Date']);
+                      // console.log(weatherThings['DailyForecasts'][0]['Day']['IconPhrase']);
+                      // console.log(weatherThings['DailyForecasts'][0]['Temperature']['Maximum']['Value']);
+                      let data = {
+                        text : weatherThings['Headline']['Text'],
+                        prhase: weatherThings['DailyForecasts'][0]['Day']['IconPhrase'],
+                        date: weatherThings['DailyForecasts'][0]['Date'],
+                        max: weatherThings['DailyForecasts'][0]['Temperature']['Maximum']['Value'],
+                        min: weatherThings['DailyForecasts'][0]['Temperature']['Minimum']['Value']
+                      }
+                      return data;
+                      //return <WeatherThings[]>Object.keys(weatherThings).map(key => Object.assign({ key }, weatherThings[key]));
                     });
   }
 

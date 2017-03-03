@@ -12,7 +12,7 @@ import { BeerWeatherDataService } from '../beer-weather-data.service';
   styleUrls: ['./beer-weather.component.css']
 })
 export class BeerWeatherComponent implements OnInit {
-  weatherThings : WeatherThings[];
+  weatherThings : WeatherThings;
 
   constructor(private beerWeatherDataService : BeerWeatherDataService) { }
 

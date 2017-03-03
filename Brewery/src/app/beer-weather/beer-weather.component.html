@@ -1,7 +1,6 @@
-
 <p>
-texto
+    Pronostico para hoy:
 </p>
-<div *ngFor="let text of weatherThings.Headline | async ">
-{{text}}
-</div>
+<h3>Fecha: {{weatherThings?.date | date}} </h3>
+<h3>Para hoy: {{weatherThings?.prhase}}, minima:{{weatherThings?.min}}, maxima : {{weatherThings?.max}}</h3>
+<h3>{{weatherThings?.text}}</h3>
