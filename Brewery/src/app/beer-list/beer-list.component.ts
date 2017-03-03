@@ -8,7 +8,6 @@ import { FilterPipe } from '../filter.pipe';
   selector: 'beer-list',
   templateUrl: './beer-list.component.html',
   styleUrls: ['./beer-list.component.css'],
-  pipes: [FilterPipe]
 })
 export class BeerListComponent implements OnInit {
 beers : Beer[];
