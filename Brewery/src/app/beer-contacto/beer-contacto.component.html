@@ -7,35 +7,27 @@
                         <legend class="text-center header">Contactenos</legend>
 
                         <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
-                                <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
+                                <input [(ngModel)]="email" id="email" name="email" type="text" placeholder="Email" class="form-control">
                             </div>
                         </div>
-
                         <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="phone" name="phone" type="text" placeholder="Telefono" class="form-control">
+                                <input [(ngModel)]="subjet" id="subjet" name="name" type="text" placeholder="Asunto" class="form-control">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                             <div class="col-md-8">
-                                <textarea class="form-control" id="message" name="message" placeholder="Mensaje" rows="7"></textarea>
+                                <textarea [(ngModel)]="message" class="form-control" id="message" name="message" placeholder="Mensaje" rows="7"></textarea>
                             </div>
                         </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary" (click)='postForm(email,subjet,message)'>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
