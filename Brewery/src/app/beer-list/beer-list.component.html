@@ -1,3 +1,9 @@
+<form class="navbar-form navbar-left">
+  <div class="form-group">
+    <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search">
+   </div>
+  <button type="submit" class="btn glyphicon glyphicon-search btn-default"></button>
+</form>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -11,7 +17,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
+    <tr *ngFor="let beer of beers | filter:term" [class.clearance]="beer.clearance" >
       <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>

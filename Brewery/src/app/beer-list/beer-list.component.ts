@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
 import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
-
-
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'beer-list',
   templateUrl: './beer-list.component.html',
-  styleUrls: ['./beer-list.component.css']
+  styleUrls: ['./beer-list.component.css'],
+  pipes: [FilterPipe]
 })
 export class BeerListComponent implements OnInit {
 beers : Beer[];
