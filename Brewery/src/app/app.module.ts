@@ -11,13 +11,15 @@ import { CartService } from './cart.service';
 import { appRoutes } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
+import { BeerFilterPipe } from './beer-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerListComponent,
     AboutComponent,
-    CartComponent
+    CartComponent,
+    BeerFilterPipe
   ],
   imports: [
     BrowserModule,
