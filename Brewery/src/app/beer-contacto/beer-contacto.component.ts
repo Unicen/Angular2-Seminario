@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'beer-contacto',
+  selector: 'app-beer-contacto',
   templateUrl: './beer-contacto.component.html',
   styleUrls: ['./beer-contacto.component.css']
 })
