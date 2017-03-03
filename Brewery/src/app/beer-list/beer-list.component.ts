@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
 import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
-
+ 
 
 @Component({
   selector: 'beer-list',
@@ -20,7 +20,7 @@ export class BeerListComponent implements OnInit {
   ngOnInit() {
     this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
   }
-
+ 
   upQuantity(beer){
     if(beer.quantity < beer.stock && beer.stock != 0) beer.quantity++;
   }
