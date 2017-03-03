@@ -17,7 +17,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let beer of beers | BeerFilterPipe:name" [class.clearance]="beer.clearance" >
-      <td><img [src]="beer.image" [alt]="beer.name"/></td>
+      <td>
+        <img [src]="beer.image" [alt]="beer.name" alt="140x140" data-src="holder.js/140x140" class="img-circle" data-holder-rendered="true" style="width: 140px; height: 140px;">
+      </td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
       <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>
