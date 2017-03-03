@@ -31,7 +31,7 @@ export class CartComponent implements OnInit {
     return total
   }
   comprar(beers,totalCarro) {
-  //  console.log(totalCarro);
+    //console.log(totalCarro);
     //console.log(beers);
     beers.total = totalCarro;
     let data = {
