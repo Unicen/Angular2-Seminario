@@ -43,4 +43,5 @@ beers : Beer[];
     beer.stock -= beer.quantity;
   }
 
+
 }
