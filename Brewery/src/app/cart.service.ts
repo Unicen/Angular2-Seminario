@@ -42,4 +42,10 @@ export class CartService {
     return this._items;
   }
 
+ // realizarCompra(){
+  // let headers = new Headers ({ 'Content-Type': 'application/json' });
+  // let options = new RequestOptions({ headers: headers, method: "post" });
+
+   //this.http.post('https://compra-812c2.firebaseio.com/')
+// }
 }

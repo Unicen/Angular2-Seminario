@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
 import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
-
+import { BeerFilterPipe } from '../beer-filter.pipe';
 
 
 @Component({
