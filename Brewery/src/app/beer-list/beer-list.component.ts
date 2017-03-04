@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
 import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
+import { FilterName } from '../pipes/filtername.pipe';
 
 
 
@@ -16,7 +17,7 @@ beers : Beer[];
   constructor(private beerDataService : BeerDataService, private cartService: CartService) { }
 
   ngOnInit() {
-    this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
+      this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
   }
 
   upQuantity(beer){
