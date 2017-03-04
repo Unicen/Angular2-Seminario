@@ -1,0 +1,16 @@
+<h2>Escribanos</h2>
+<form method="post">
+  <div class="form-group">
+    <label for="nombreCompleto">Nombre Completo</label>
+    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Perez" [(ngModel)]="nombre">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="email">
+  </div>
+  <div class="form-group">
+    <label for="mensaje">mensaje</label>
+    <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" [(ngModel)]="mensaje" rows="8" cols="40"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)='sendForm(nombre,email,mensaje)'>Enviar</button>
+</form>

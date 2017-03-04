@@ -6,14 +6,20 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BeerListComponent } from './beer-list/beer-list.component';
+import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ContactComponent } from './contact/contact.component';
+
 import { BeerDataService } from './beer-data.service';
 import { CartService } from './cart.service';
 import { WeatherDataService } from './weather-data.service';
+import { ContactFormService } from './contact-form.service';
+
 import { appRoutes } from './app.routes';
-import { AboutComponent } from './about/about.component';
-import { CartComponent } from './cart/cart.component';
+
 import { filterPipe } from './filter.pipe';
-import { WeatherComponent } from './weather/weather.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +28,8 @@ import { WeatherComponent } from './weather/weather.component';
     AboutComponent,
     CartComponent,
     filterPipe,
-    WeatherComponent
+    WeatherComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,7 @@ import { WeatherComponent } from './weather/weather.component';
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ BeerDataService, CartService, WeatherDataService ],
+  providers: [ BeerDataService, CartService, WeatherDataService, ContactFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

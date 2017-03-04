@@ -13,7 +13,7 @@ export class WeatherDataService {
             .map(response =>
             {
               let clima = response.json();
-              console.log(clima);
+              //console.log(clima);
               let data={
                 prhase: clima['DailyForecasts'][0]['Day']['IconPhrase'],
                 prhaseNight: clima['DailyForecasts'][0]['Night']['IconPhrase'],
