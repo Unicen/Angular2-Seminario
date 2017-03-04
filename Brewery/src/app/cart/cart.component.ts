@@ -10,7 +10,7 @@ import {BeerDataService} from "../beer-data.service";
 export class CartComponent implements OnInit {
 
   beers = [];
-
+  
   constructor(private cartService: CartService, private beerDataService: BeerDataService) {
   }
 
@@ -32,8 +32,12 @@ export class CartComponent implements OnInit {
     return total
   }
   
-  save() {
-    this.cartService.postBeers(this.beers);
+  save(beerCart) {
+    if(this.beers.length > 0){
+      this.cartService.postBeers(beerCart).subscribe(()=>{
+          this.beers = [];
+      });
+    }
   }
 
 }

@@ -16,11 +16,4 @@ export class BeerDataService {
             return <Beer[]>Object.keys(beers).map(key => Object.assign({ key }, beers[key]));
           });
   }
-  updateBeers(beers){
-      return this.http.put('https://beerdataservice-5f1d5.firebaseio.com/beers.json',JSON.stringify(Beer))
-          .map(response => response.json());
-  }
-    
-    
-
 }
