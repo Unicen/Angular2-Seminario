@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87a3637e-39d1-4c54-b224-f14e826f46eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/README.md" afterPath="$PROJECT_DIR$/Brewery/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/about/about.component.html" afterPath="$PROJECT_DIR$/Brewery/src/app/about/about.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/about/about.component.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/about/about.component.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/about/about.component.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/about/about.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/app.component.html" afterPath="$PROJECT_DIR$/Brewery/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/app.component.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/app.component.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/app.component.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/app.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/app.module.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/app.routes.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-data.service.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-data.service.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-data.service.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-data.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.css" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.html" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/beer-list/beer.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/cart.service.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/cart.service.spec.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/cart.service.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/cart.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.css" afterPath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.html" afterPath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/filtrar-nombre.pipe.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/filtrar-nombre.pipe.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/index.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/index.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather.service.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/weather.service.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather.service.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/weather.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.css" afterPath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.html" afterPath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.spec.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/weather/weather.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/app/weather/weather.ts" afterPath="$PROJECT_DIR$/Brewery/src/app/weather/weather.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/environments/environment.prod.ts" afterPath="$PROJECT_DIR$/Brewery/src/environments/environment.prod.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/environments/environment.ts" afterPath="$PROJECT_DIR$/Brewery/src/environments/environment.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/index.html" afterPath="$PROJECT_DIR$/Brewery/src/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/main.ts" afterPath="$PROJECT_DIR$/Brewery/src/main.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/polyfills.ts" afterPath="$PROJECT_DIR$/Brewery/src/polyfills.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/styles.css" afterPath="$PROJECT_DIR$/Brewery/src/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/test.ts" afterPath="$PROJECT_DIR$/Brewery/src/test.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/tsconfig.json" afterPath="$PROJECT_DIR$/Brewery/src/tsconfig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Brewery/src/typings.d.ts" afterPath="$PROJECT_DIR$/Brewery/src/typings.d.ts" />
     </list>
     <ignored path="Angular2-Seminario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cart.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cart.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Brewery/src/app/cart/cart.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
@@ -75,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.service.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cart.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Brewery/src/app/cart.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-445">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="289">
+              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -133,9 +92,9 @@
         <option value="$PROJECT_DIR$/Brewery/src/app/beer-data.service.ts" />
         <option value="$PROJECT_DIR$/Brewery/src/app/beer-list/beer-list.component.html" />
         <option value="$PROJECT_DIR$/Brewery/src/app/cart/cart.ts" />
-        <option value="$PROJECT_DIR$/Brewery/src/app/cart.service.ts" />
         <option value="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.html" />
         <option value="$PROJECT_DIR$/Brewery/src/app/cart/cart.component.ts" />
+        <option value="$PROJECT_DIR$/Brewery/src/app/cart.service.ts" />
       </list>
     </option>
   </component>
@@ -370,12 +329,12 @@
       <workItem from="1488544159790" duration="19108000" />
       <workItem from="1488576155419" duration="3792000" />
       <workItem from="1488633488126" duration="12717000" />
-      <workItem from="1488666633938" duration="817000" />
+      <workItem from="1488666633938" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40030000" />
+    <option name="totallyTimeSpent" value="40398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -761,14 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Brewery/src/app/cart.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-445">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Brewery/src/app/cart/cart.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -801,6 +752,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Brewery/src/app/cart.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
           <folding />
         </state>
       </provider>

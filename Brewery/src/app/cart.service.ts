@@ -44,7 +44,7 @@ export class CartService {
 
     let datos = {
       total:total,
-      lista:JSON.stringify(beers)
+      lista:beers
     };
 
     return this.http.post('https://beerdataservice-5f1d5.firebaseio.com/cart.json', JSON.stringify(datos), options);
