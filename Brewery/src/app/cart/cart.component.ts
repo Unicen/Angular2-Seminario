@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {CartService} from "../cart.service";
+import {BeerDataService} from "../beer-data.service";
 
 @Component({
   selector: 'beer-cart',
@@ -10,7 +11,7 @@ export class CartComponent implements OnInit {
 
   beers = [];
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService, private beerDataService: BeerDataService) {
   }
 
   ngOnInit() {
@@ -29,6 +30,10 @@ export class CartComponent implements OnInit {
     let total = 0;
     this.beers.forEach(beer => total += this.totalPrice(beer));
     return total
+  }
+  
+  save() {
+    this.cartService.postBeers(this.beers);
   }
 
 }

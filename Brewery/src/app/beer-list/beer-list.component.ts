@@ -11,7 +11,8 @@ import { CartService } from '../cart.service';
   styleUrls: ['./beer-list.component.css']
 })
 export class BeerListComponent implements OnInit {
-beers : Beer[];
+  filtro = '';
+  beers : Beer[] = new Array<Beer>();
 
   constructor(private beerDataService : BeerDataService, private cartService: CartService) { }
 

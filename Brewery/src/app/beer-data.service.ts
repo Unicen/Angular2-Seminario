@@ -9,12 +9,18 @@ export class BeerDataService {
   constructor(private http: Http) { }
 
   getBeers(){
-    return this.http.get('https://brewery-angular.firebaseio.com/beers.json')
-                    .map(response => 
-                    {
-                      let beers = response.json();
-                      return <Beer[]>Object.keys(beers).map(key => Object.assign({ key }, beers[key]));
-                    });
+      return this.http.get('https://beerdataservice-5f1d5.firebaseio.com/beers.json')
+          .map(response => 
+          {
+            let beers = response.json();
+            return <Beer[]>Object.keys(beers).map(key => Object.assign({ key }, beers[key]));
+          });
   }
+  updateBeers(beers){
+      return this.http.put('https://beerdataservice-5f1d5.firebaseio.com/beers.json',JSON.stringify(Beer))
+          .map(response => response.json());
+  }
+    
+    
 
 }

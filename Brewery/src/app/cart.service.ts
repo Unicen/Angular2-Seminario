@@ -12,7 +12,7 @@ export class CartService {
   public items: Observable<Beer[]> = this._itemsSubject.asObservable();
 
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   addToCart(beer: Beer) {
 
@@ -40,6 +40,12 @@ export class CartService {
 
   getItems() {
     return this._items;
+  }
+  postBeers(cart){
+    this.http.post('https://beerdataservice-5f1d5.firebaseio.com/cart.json',JSON.stringify(cart),{headers: this.headers})
+        .toPromise()
+        .then(res => res.json().data)
+        .catch(this.handleError);
   }
 
 }
