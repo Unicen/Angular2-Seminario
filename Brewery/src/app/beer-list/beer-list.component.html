@@ -1,4 +1,7 @@
-<input type="text" [(ngModel)]="filtro" />
+<div class="">
+  <h4>Filtrar por Nombre</h4>
+  <input type="text" [(ngModel)]="filtro" placeholder="Case Sensitive" />
+</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -24,7 +27,7 @@
             <button type="button" class="btn btn-default btn-xs" (click)="downQuantity(beer)">
                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
             </button>
-            <input class="" type="number" [(ngModel)]="beer.quantity" (focusout)="verifyBeerQuantity(beer)"/>
+            <input class="smallInput" type="number" [(ngModel)]="beer.quantity" (change)="verifyBeerQuantity(beer)"/>
             <button type="button" class="btn btn-default btn-xs" (click)="upQuantity(beer)">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>

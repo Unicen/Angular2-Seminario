@@ -30,17 +30,17 @@ export class BeerListComponent implements OnInit {
 
   verifyBeerQuantity(beer){
     if(beer.quantity > beer.stock) {
-      alert("No hay suficientes cervezas en stock");
+      beer.quantity = beer.stock;
     }
     if(beer.quantity < 0) {
-      alert("No se pueden encargar cervezas negativas ");
+      beer.quantity = 0;
     }
-    beer.quantity = 0;
   }
 
   addCart(beer: Beer) {
     this.cartService.addToCart(beer);
     beer.stock -= beer.quantity;
+    beer.quantity = 0;
   }
 
 }

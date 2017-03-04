@@ -1,6 +1,5 @@
 import {Component, OnInit} from "@angular/core";
 import {CartService} from "../cart.service";
-import {BeerDataService} from "../beer-data.service";
 
 @Component({
   selector: 'beer-cart',
@@ -10,8 +9,10 @@ import {BeerDataService} from "../beer-data.service";
 export class CartComponent implements OnInit {
 
   beers = [];
-  
-  constructor(private cartService: CartService, private beerDataService: BeerDataService) {
+  cartel = '';
+  status = '';
+
+  constructor(private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -31,13 +32,18 @@ export class CartComponent implements OnInit {
     this.beers.forEach(beer => total += this.totalPrice(beer));
     return total
   }
-  
-  save(beerCart) {
-    if(this.beers.length > 0){
-      this.cartService.postBeers(beerCart).subscribe(()=>{
-          this.beers = [];
-      });
-    }
-  }
 
+  save() {
+    this.cartService.postBeers(this.beers, this.total)
+        .subscribe(res => {
+          if(res.status == 200){
+            this.cartel = "Felicitaciones, la compra se ha realizado correctamente";
+            this.status = "ok";
+            this.beers=[];
+          } else {
+            this.cartel = "Ha ocurrido un error en su compra, vuelva a intentarlo más tarde";
+            this.status = "error";
+          }
+        });
+  }
 }
