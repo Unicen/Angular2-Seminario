@@ -3,8 +3,18 @@
     <div class="header-container">
         <div class="menu"></div>
         <div class="logo-container">
-            <div class="logo"></div>
+            <div class="logo"><a routerLink="" routerLinkActive="active"></a> </div>
         </div>
+
+        <div class="weather-container">
+            <div class="weather-icon"></div>
+            <div class="weather-box">
+                <weather></weather>
+            </div>
+        </div>
+
+        <div class="search"></div>
+
         <div class="cart-container">
             <div class="cart"></div>
             <div class="mini-cart">
@@ -15,14 +25,18 @@
     <nav class="nav">
         <div class="close">X</div>
         <ul>
-            <li *ngFor="let navItem of nav">{{navItem}}</li>
+            <li><a routerLink="/beers" routerLinkActive="active">Beers</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+            <li><a routerLink="" routerLinkActive="active">Store</a></li>
+            <li><a routerLink="" routerLinkActive="active">Find Us</a></li>
+            <li><a routerLink="" routerLinkActive="active">Contact Us</a></li>
         </ul>
     </nav>
 </header>
 
 <div class="main-content">
-    <div class="list-container">
-        <beer-list></beer-list>
+    <div class="container">
+        <router-outlet></router-outlet>
     </div>
 </div>
 

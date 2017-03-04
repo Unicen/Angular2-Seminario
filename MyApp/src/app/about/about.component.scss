@@ -1,0 +1,55 @@
+@import '../sass/common';
+
+.about-container {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 30px 20px;
+
+    h3 {
+        color: $brown;
+        font-family: $f-playfair-family;
+        font-size: 18px;
+        font-weight: $f-play-bold;
+        margin-top: 10px;
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+    p {
+        font-family: $f-novo-family;
+        font-size: 13px;
+        font-weight: $f-novo-regular;
+        letter-spacing: 0.6px;
+        line-height: 20px;
+    }
+
+    .left,
+    .right{
+        display: inline-block;
+        vertical-align: top;
+
+        @media (max-width: $bp-phone) {
+            display: block;
+            float: none;
+            width: auto;
+        }
+    }
+
+    .left {
+        width: 68%;
+
+        @media (max-width: $bp-phone) {
+            width: auto;
+        }
+    }
+
+    .right {
+        float: right;
+        width: 30%;
+
+        @media (max-width: $bp-phone) {
+            float: none;
+            width: auto;
+        }
+    }
+}

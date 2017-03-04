@@ -1,38 +1,66 @@
-//[ ------ ------
-//[ Fonts
-//[ ------ ------
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Playfair+Display:400,400i,700,700i,900,900i');
+@import '../sass/common';
 
-$sans-font-family: Arial, Helvetica, sans-serif;
-$serif-font-family: Georgia, Times, 'Times New Roman', serif;
+.table-container {
+    height: 100%;
+    position: relative;
 
-$f-novo-family: "Noto Sans", $sans-font-family;
-$f-playfair-family: "Playfair Display", $serif-font-family;
+    table {
+        height: 100%;
+        width: 100%;
 
-$f-novo-regular: 400;
-$f-novo-bold: 700;
+        tr {
+            th {
+                color: $black;
+                font-family: $f-play-black;
+                font-size: 14px;
+                font-weight: $f-play-bold;
+                text-transform: capitalize;
+            }
 
-$f-play-regular: 400;
-$f-play-bold: 700;
-$f-play-black: 900;
+            td {
+                color: $black;
+                font-family: $f-novo-family;
+                font-size: 12px;
+                font-weight: $f-novo-regular;
+                text-align: center;
+                width: 25%;
 
-//[ ------ ------
-//[ Colours
-//[ ------ ------
-$black: #000;
-$white: #FFF;
-$brown: #bfb68d;
-$grey: #edecec;
-$grey-2: #a9a8a8;
+                .button {
+                    background-color: $brown;
+                    border-radius: 3px;
+                    color: $white;
+                    display: block;
+                    font-weight: $f-novo-bold;
+                    line-height: 25px;
+                    width: 90px;
+                }
 
-//[ ------ ------
-//[ Size
-//[ ------ ------
-$page-size: 1000px;
-$page-padding-width: 20px;
+                img {
+                    height:auto;
+                    width: 24%;
+                }
 
-$bp-phone:480px;
+            }
 
-p {
-  color: $black;
+            &.empty {
+                span {
+                    font-weight: $f-novo-bold;
+                }
+            }
+
+        }
+
+        tfoot {
+            bottom: 0;
+            position: absolute;
+
+            tr {
+                td {
+                    font-family: $f-novo-family;
+                    font-size: 12px;
+                    font-weight: $f-novo-bold;
+                }
+            }
+        }
+    }
 }

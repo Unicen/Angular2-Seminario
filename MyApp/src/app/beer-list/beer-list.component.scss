@@ -1,40 +1,52 @@
-//[ ------ ------
-//[ Fonts
-//[ ------ ------
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Playfair+Display:400,400i,700,700i,900,900i');
+@import '../sass/common';
 
-$sans-font-family: Arial, Helvetica, sans-serif;
-$serif-font-family: Georgia, Times, 'Times New Roman', serif;
+.search-container {
+    background-color: $white;
+    border: none;
+    border-radius: 3px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    transition: all 0.3s ease-in-out ;
+    top: -68px;
+    z-index: 999;
 
-$f-novo-family: "Noto Sans", $sans-font-family;
-$f-playfair-family: "Playfair Display", $serif-font-family;
+    &.active {
+        opacity: 1;
+    }
 
-$f-novo-regular: 400;
-$f-novo-bold: 700;
+    &:after {
+        border-bottom: 4px solid $white;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -4px;
+        right: 32px;
+    }
 
-$f-play-regular: 400;
-$f-play-bold: 700;
-$f-play-black: 900;
+    input {
+        border:none;
+        border-radius: 3px;
+        font-family: $f-novo-family;
+        font-size: 12px;
+        font-weight: $f-novo-regular;
+        letter-spacing: 1px;
+        padding: 5px;
+        width: 250px;
 
-//[ ------ ------
-//[ Colours
-//[ ------ ------
-$black: #000;
-$white: #FFF;
-$brown: #bfb68d;
-$grey: #edecec;
-$grey-2: #a9a8a8;
+        @media (max-width: $bp-phone) {
+            width: 180px;
+        }
+    }
 
-//[ ------ ------
-//[ Size
-//[ ------ ------
-$page-size: 1000px;
-$page-padding-width: 20px;
-
-$bp-phone:480px;
-
-
-
+    @media (max-width: $bp-phone) {
+        input {
+            width: 85px;
+        }
+    }
+}
 
 table {
     border-collapse: collapse;
@@ -46,10 +58,13 @@ table {
         font-weight: $f-play-bold;
         text-align: left;
         line-height: 38px;
+        letter-spacing: 1px;
 
-        &:last-child {
+        &:nth-child(6),
+        &:nth-child(5){
             text-align: center;
         }
+
     }
 
     tbody tr {
@@ -62,6 +77,7 @@ table {
 
             &.beer-image {
                 position: relative;
+                text-align: center;
 
                 div {
                     display: none;
@@ -98,11 +114,23 @@ table {
                 }
             }
 
-            &:first-child {
-                text-align: center;
+            &.cart {
+                cursor: pointer;
+
+                &:before {
+                    background-image: url('/assets/icons/cart.png');
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    content: '';
+                    display: block;
+                    height: 25px;
+                    width: 25px;
+                }
             }
 
-            &:last-child {
+            &:nth-child(6),
+            &:nth-child(5){
                 text-align: center;
                 white-space: nowrap;
             }
@@ -163,10 +191,12 @@ table {
 
             th, td {
                 text-align: center;
+
+                &:nth-child(5) {
+                    display: none;
+                }
             }
         }
     }
-
-
 }
 

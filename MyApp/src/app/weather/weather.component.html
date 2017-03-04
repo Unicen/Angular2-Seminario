@@ -1,0 +1,8 @@
+<div class="weather-data">
+    <p>De acuerdo a la máxima esperada para este {{weather?.date | date}}, te damos algunos consejos para llevar mejor el día.</p>
+    <p class="text"><span>{{weather?.text}}</span></p>
+    <div class="weather-advise">
+        <p *ngIf="weather?.max >= 20"><sup>***</sup>Cuando pintó 'LA' calor, la mejor forma de no deshidratarse es con al menos 2 birras.</p>
+        <p *ngIf="weather?.max < 20"><sup>***</sup>Está fresco, pero nada te impide darte un gustito. Las papas fritas con crema y verdeo son ideales para acompañar una birra.</p>
+    </div>
+</div>

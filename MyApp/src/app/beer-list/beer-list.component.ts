@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BeerDataService } from '../beer-data.service';
+import { CartService } from '../cart.service';
+import { Beer } from "./beer";
 
 @Component({
     selector: 'beer-list',
@@ -15,12 +17,15 @@ export class BeerListComponent implements OnInit {
         'quantity': 'Cantidad'
     };
 
+    textInput = '';
+
     beers = [];
 
-    constructor(private beerDataService: BeerDataService) {
+    constructor(private beerDataService: BeerDataService, private cartService: CartService) {
     }
 
     ngOnInit() {
+        document.body.className = '';
         this.beerDataService.getBeers().subscribe(beers => this.beers = beers);
     }
 
@@ -33,4 +38,10 @@ export class BeerListComponent implements OnInit {
         if (beer.quantity > 0)
             beer.quantity--;
     };
+
+    addToCart(beer: Beer) {
+        this.cartService.addToCart(beer);
+        beer.stock -= beer.quantity;
+        beer.quantity = 0;
+    }
 }

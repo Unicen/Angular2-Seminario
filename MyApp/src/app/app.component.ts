@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FilterInputPipe } from './filter-input.pipe';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  nav = [
-      'Beers',
-      'Factory',
-      'Stores',
-      'Find Us',
-      'Contant'
-  ];
+
 }
 
 @Component({

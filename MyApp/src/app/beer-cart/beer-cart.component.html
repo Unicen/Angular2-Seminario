@@ -1,3 +1,34 @@
-<p>
-  beer-cart works!
-</p>
+<div class="table-container">
+    <table>
+        <thead>
+        <tr *ngIf="beers.length == 0">
+            <th></th>
+        </tr>
+        <tr *ngIf="beers.length > 0">
+            <th></th>
+            <th>{{tableTitles.name}}</th>
+            <th>{{tableTitles.quantity}}</th>
+            <th>{{tableTitles.price}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngIf="beers.length == 0" class="empty">
+            <td>{{alert.first}} <span>{{alert.second}}</span></td>
+        </tr>
+        <tr *ngFor="let beer of beers">
+            <td><img src="{{beer.image}}" alt="{{beer.name}}"/></td>
+            <td>{{beer.name}}</td>
+            <td>{{beer.quantity}}</td>
+            <td>{{beer.price | currency:'USD':true:'.2-2'}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr *ngIf="beers.length > 0">
+            <td>Total</td>
+            <td>{{subtotal() | currency:'USD':true:'.2-2'}}</td>
+            <td></td>
+            <td><span (click)="addCartToServer(beers)" class="button">Comprar</span></td>
+        </tr>
+        </tfoot>
+    </table>
+</div>

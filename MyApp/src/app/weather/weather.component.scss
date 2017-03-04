@@ -1,0 +1,30 @@
+@import '../sass/common';
+
+.weather-data {
+    padding: 5px;
+
+    p {
+        font-family: $f-playfair-family;
+        font-size: 14px;
+        font-weight: $f-play-regular;
+        letter-spacing: 0.5px;
+
+        &.text {
+            margin-top: 20px;
+        }
+
+        span {
+            font-style: italic;
+        }
+    }
+
+    .weather-advise {
+        padding-top: 20px;
+
+        p {
+            font-family: $f-novo-family;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+    }
+}
