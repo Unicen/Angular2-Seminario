@@ -9,6 +9,8 @@ import {CartService} from "../cart.service";
 export class CartComponent implements OnInit {
 
   beers = [];
+  cartel = '';
+  status = '';
 
   constructor(private cartService: CartService) {
   }
@@ -31,4 +33,17 @@ export class CartComponent implements OnInit {
     return total
   }
 
+  save() {
+    this.cartService.postBeers(this.beers, this.total)
+        .subscribe(res => {
+          if(res.status == 200){
+            this.cartel = "Felicitaciones, la compra se ha realizado correctamente";
+            this.status = "ok";
+            this.beers=[];
+          } else {
+            this.cartel = "Ha ocurrido un error en su compra, vuelva a intentarlo más tarde";
+            this.status = "error";
+          }
+        });
+  }
 }

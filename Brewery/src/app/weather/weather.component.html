@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">Datos del clima de Tandil</div>
+  <div class="panel-body">
+    <p>{{weather.text}}</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+        <th>Temperatura Minima</th>
+        <th>Temperatura Maxima</th>
+        <th>Dia</th>
+        <th>Noche</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{weather.temperatureMin}} °C</td>
+        <td>{{weather.temperatureMax}} °C</td>
+        <td><img src="https://vortex.accuweather.com/adc2010/images/slate/icons/{{weather.day}}.svg" alt=""></td>
+        <td><img src="https://vortex.accuweather.com/adc2010/images/slate/icons/{{weather.night}}.svg" alt=""></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

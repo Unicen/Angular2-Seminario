@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import { Beer } from './beer-list/beer';
 import 'rxjs/add/operator/map';
 import {BehaviorSubject, Observable} from "rxjs";
@@ -12,7 +12,7 @@ export class CartService {
   public items: Observable<Beer[]> = this._itemsSubject.asObservable();
 
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   addToCart(beer: Beer) {
 
@@ -38,8 +38,15 @@ export class CartService {
     this._itemsSubject.next(this._items);
   }
 
-  getItems() {
-    return this._items;
-  }
+  postBeers(beers, total){
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
 
+    let datos = {
+      total:total,
+      lista:beers
+    };
+
+    return this.http.post('https://beerdataservice-5f1d5.firebaseio.com/cart.json', JSON.stringify(datos), options);
+  }
 }

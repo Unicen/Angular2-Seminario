@@ -18,5 +18,11 @@
       </tbody>
     </table>
     <h2 class="text-right">Total: {{total()| currency:'USD':true:'1.2-2'}}</h2>
+    <button class="btn" (click)="save()">PUSH</button>
+    <div *ngIf="status != ''"
+        [class.bg-success] = "status == 'ok'"
+        [class.bg-danger] = "status == 'error'">
+      <p>{{cartel}}</p>
+    </div>
   </div>
 </div>
