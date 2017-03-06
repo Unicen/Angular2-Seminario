@@ -1,3 +1,9 @@
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Buscar cerveza" [(ngModel)]="bname" name="nombre">
+  </div>
+</form>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,8 +16,8 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
+  <tbody> 
+    <tr *ngFor="let beer of beers | filterForName:bname">
       <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>

@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+ <div class="panel-heading">El clima para este dia {{ dateObj | date }}</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Min</th>
+          <th>Max</th>
+          <th>Descripcion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{climaA?.tempMin}}</td>
+          <td>{{climaA?.tempMax}}</td>
+          <td>{{climaA?.desc}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
