@@ -14,6 +14,8 @@ import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
 import { FilterbeerPipe } from './filterbeer.pipe';
 import { BeerWeatherComponent } from './beer-weather/beer-weather.component';
+import { BeerContactService } from './beer-contact.service';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { BeerWeatherComponent } from './beer-weather/beer-weather.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ BeerDataService, CartService, WeatherDataService],
+  providers: [ BeerDataService, CartService, WeatherDataService, BeerContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

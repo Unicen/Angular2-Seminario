@@ -1,65 +1,21 @@
 
-<div class="container col-md-8">
+<form [formGroup]="contactForm" (ngSubmit)="contactar($event)">
 
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Contact Us Today!</legend>
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">First Name</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+    <div class="form-group">
+    <label for="name">Name:</label>
+    <input formControlName="name" type="name" placeholder="Your name" required >  
     </div>
-  </div>
-</div>
-
-
-
-<!-- Text input-->
-       <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+     <div class="form-group">
+    <label for="email">Email:</label>
+    <input formControlName="email" type="email" placeholder="Your email" required >
     </div>
-  </div>
-</div>
-
-<!-- Text area -->
-  
-<div class="form-group">
-  <label class="col-md-4 control-label">Project Description</label>
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
-  </div>
-  </div>
-</div>
-
-<!-- Success message -->
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-  </div>
-</div>
-
-</fieldset>
+    <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea formControlName="message"  class="form-control" placeholder="messege..." required></textarea>
+    </div>
+  <button type="submit">Send</button>
 </form>
-
-    </div><!-- /.container -->
-<address class="col-md-8">
+<address class="col-md-12">
   <strong>Brewery, Inc.</strong><br>
   Calle Falsa 123<br>
   Tandil, Bs As 7000<br>
