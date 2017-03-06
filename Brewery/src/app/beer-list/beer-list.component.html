@@ -1,7 +1,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th></th>
+      <th><input placeholder="Cerveza a Buscar" [(ngModel)]="search"/></th>
       <th>Nombre</th>
       <th>Tipo</th>
       <th>Precio</th>
@@ -11,7 +11,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
+
+
+    <tr *ngFor="let beer of beers | searchPipe:search" [class.clearance]="beer.clearance">
       <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>

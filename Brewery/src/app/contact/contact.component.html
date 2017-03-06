@@ -1,0 +1,25 @@
+<div class="container">
+<div class="col-md-5 col-md-offset-1">
+    <div class="form-area">
+        <form role="form">
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Formulario de Contacto</h3>
+    				<div class="form-group">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Nombre" [(ngModel)]="formu.name" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="formu.mail" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto" [(ngModel)]="formu.subject" required>
+					</div>
+                    <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Mensaje" name="message" maxlength="140" rows="7" [(ngModel)]="formu.message"></textarea>
+                    </div>
+
+        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right" (click)="enviarMensaje()">Enviar mensaje</button>
+        <h3>{{mensaje}}</h3>
+        </form>
+    </div>
+</div>
+</div>

@@ -9,7 +9,7 @@ export class BeerDataService {
   constructor(private http: Http) { }
 
   getBeers(){
-    return this.http.get('https://brewery-angular.firebaseio.com/beers.json')
+    return this.http.get('https://breweryapp.firebaseio.com/beers.json')
                     .map(response => 
                     {
                       let beers = response.json();
