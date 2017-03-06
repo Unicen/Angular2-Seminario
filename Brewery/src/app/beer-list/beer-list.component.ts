@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Beer } from './beer';
 import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
+import {FilterBeersPipe} from '../filter-beers.pipe';
 
 
 
@@ -41,5 +42,6 @@ beers : Beer[];
     this.cartService.addToCart(beer);
     beer.stock -= beer.quantity;
   }
+
 
 }
