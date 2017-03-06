@@ -1,4 +1,21 @@
-<address>
+
+<form [formGroup]="contactForm" (ngSubmit)="contactar($event)">
+
+    <div class="form-group">
+    <label for="name">Name:</label>
+    <input formControlName="name" type="name" placeholder="Your name" required >  
+    </div>
+     <div class="form-group">
+    <label for="email">Email:</label>
+    <input formControlName="email" type="email" placeholder="Your email" required >
+    </div>
+    <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea formControlName="message"  class="form-control" placeholder="messege..." required></textarea>
+    </div>
+  <button type="submit">Send</button>
+</form>
+<address class="col-md-12">
   <strong>Brewery, Inc.</strong><br>
   Calle Falsa 123<br>
   Tandil, Bs As 7000<br>

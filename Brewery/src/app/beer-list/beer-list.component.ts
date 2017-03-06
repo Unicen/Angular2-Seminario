@@ -11,12 +11,13 @@ import { CartService } from '../cart.service';
   styleUrls: ['./beer-list.component.css']
 })
 export class BeerListComponent implements OnInit {
-beers : Beer[];
-
+  beers : Beer[];
+  
   constructor(private beerDataService : BeerDataService, private cartService: CartService) { }
 
   ngOnInit() {
     this.beerDataService.getBeers().subscribe(beers => this.beers=beers);
+   
   }
 
   upQuantity(beer){

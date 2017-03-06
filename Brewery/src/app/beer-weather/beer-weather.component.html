@@ -1,0 +1,5 @@
+<div *ngFor="let cl of clima">
+ <p>Temperatura {{cl.Temperature.Metric.Value}} </p>
+ <img src="http://apidev.accuweather.com/developers/Media/Default/WeatherIcons/{{cl.WeatherIcon | number:'2.0-3'}}-s.png" alt="">
+ <p>{{cl.WeatherText}}</p>
+</div>
