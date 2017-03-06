@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+ <div class="panel-heading">El clima</div>
+  <div class="panel-body ">
+  	El día de hoy <b>{{weatherData?.fecha | date }}</b> tiene {{weatherData?.descripcion}}
+
+  	<br> 
+  	La temperatura máxima será de <b>{{weatherData?.maxTemp}} {{weatherData?.metrica}}°
+  	 </b> 
+  	<br> 
+  	La temperatura minima será de <b>{{weatherData?.minTemp}} {{weatherData?.metrica}}°
+  	</b> 
+	<br>
+  	Estado del dia: <b>{{weatherData?.dia}}</b><br>
+  	Estado de la noche: <b>{{weatherData?.noche}}</b>
+
+  </div>
+</div>

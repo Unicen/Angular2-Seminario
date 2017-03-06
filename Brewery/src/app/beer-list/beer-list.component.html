@@ -1,3 +1,8 @@
+<input type="text" class="form-inline form-control" placeholder="Busquedar cerveza" [(ngModel)]="search" />
+
+
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -8,26 +13,30 @@
       <th>Stock</th>
       <th></th>
       <th></th>
+
+
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
-      <td><img [src]="beer.image" [alt]="beer.name"/></td>
+
+
+    <tr *ngFor="let beer of beers | searchPipe:search" [class.clearance]="beer.clearance">
+      <td><img [src]="beer.image" [alt]="beer.name" /></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>
       <td>{{beer.price| currency:'USD':true:'1.2-2'}}</td>
-      <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true"  data-toggle="tooltip" data-placement="right" title="{{beer.stock}}"  ></span></td>
+      <td *ngIf="beer.stock>0"><span class="glyphicon glyphicon-ok" aria-hidden="true" data-toggle="tooltip" data-placement="right" title="{{beer.stock}}"></span></td>
       <td *ngIf="beer.stock==0"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
       <td>
-         <div class="form-group">
-            <button type="button" class="btn btn-default btn-xs" (click)="downQuantity(beer)">
+        <div class="form-group">
+          <button type="button" class="btn btn-default btn-xs" (click)="downQuantity(beer)">
                 <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
             </button>
-            <input class="smallInput" type="number" [(ngModel)]="beer.quantity" (focusout)="verifyBeerQuantity(beer)"/>
-            <button type="button" class="btn btn-default btn-xs" (click)="upQuantity(beer)">
+          <input class="smallInput" type="number" [(ngModel)]="beer.quantity" (focusout)="verifyBeerQuantity(beer)" />
+          <button type="button" class="btn btn-default btn-xs" (click)="upQuantity(beer)">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
-          </div>
+        </div>
       </td>
       <td>
         <button type="button" class="btn btn-default btn-xs" [disabled]="beer.quantity <= 0" (click)="addCart(beer)">
