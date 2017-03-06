@@ -4,11 +4,10 @@ import { BeerDataService } from '../beer-data.service';
 import { CartService } from '../cart.service';
 
 
-
 @Component({
   selector: 'beer-list',
   templateUrl: './beer-list.component.html',
-  styleUrls: ['./beer-list.component.css']
+  styleUrls: ['./beer-list.component.css'],
 })
 export class BeerListComponent implements OnInit {
 beers : Beer[];
