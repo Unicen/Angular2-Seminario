@@ -1,0 +1,25 @@
+#recuadro{
+  border: 6px solid rgb(112, 170, 223);
+  border-radius: 5px;
+  background-color: rgb(212, 219, 245);
+}
+
+h3{
+  text-align: center;
+}
+
+ul{
+  margin: 0;
+  padding-left: 50px;
+}
+
+li{
+  font-size: 15px;
+}
+
+p{
+  text-align: right;
+  font-style: italic;
+  font-size: 10px;
+  margin-right: 10px;
+}
