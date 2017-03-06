@@ -18,5 +18,6 @@
       </tbody>
     </table>
     <h2 class="text-right">Total: {{total()| currency:'USD':true:'1.2-2'}}</h2>
+    <button type="button" class="btn btn-default" [disabled]="total() <= 0" (click)="comprar(beers,total())" >Comprar</button>
   </div>
 </div>
