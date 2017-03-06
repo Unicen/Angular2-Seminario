@@ -12,7 +12,7 @@ export class CartService {
   public items: Observable<Beer[]> = this._itemsSubject.asObservable();
 
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   addToCart(beer: Beer) {
 
@@ -40,6 +40,14 @@ export class CartService {
 
   getItems() {
     return this._items;
+  }
+
+  guardarCompra(items, total) {
+    let data = {
+      items: items,
+      total: total
+    }
+    return this.http.post('https://brewery-b0275.firebaseio.com/cart.json',JSON.stringify(data));
   }
 
 }

@@ -9,6 +9,7 @@ import {CartService} from "../cart.service";
 export class CartComponent implements OnInit {
 
   beers = [];
+  mensaje = "";
 
   constructor(private cartService: CartService) {
   }
@@ -29,6 +30,15 @@ export class CartComponent implements OnInit {
     let total = 0;
     this.beers.forEach(beer => total += this.totalPrice(beer));
     return total
+  }
+
+  guardarCompra() {
+    this.cartService.guardarCompra(this.beers, this.total()).subscribe(response => {
+      if (response.status == 200) {
+        this.mensaje = "La compra se realizó correctamente.";
+        this.beers = [];
+      }
+    });
   }
 
 }

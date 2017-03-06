@@ -11,13 +11,18 @@ import { CartService } from './cart.service';
 import { appRoutes } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { CartComponent } from './cart/cart.component';
+import { FiltroCervezasPipe } from './filtro-cervezas';
+import { BreweryClimaService } from './brewery-clima.service';
+import { ClimaComponent } from './clima/clima.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerListComponent,
     AboutComponent,
-    CartComponent
+    CartComponent,
+    FiltroCervezasPipe,
+    ClimaComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,7 @@ import { CartComponent } from './cart/cart.component';
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ BeerDataService, CartService ],
+  providers: [ BeerDataService, CartService, BreweryClimaService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
