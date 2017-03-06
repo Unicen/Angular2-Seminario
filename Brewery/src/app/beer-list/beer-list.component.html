@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let beer of beers" [class.clearance]="beer.clearance" >
+    <tr *ngFor="let beer of beers | beerSearch:filter" [class.clearance]="beer.clearance" >
       <td><img [src]="beer.image" [alt]="beer.name"/></td>
       <td>{{beer.name}}</td>
       <td>{{beer.style}}</td>

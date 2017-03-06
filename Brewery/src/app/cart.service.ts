@@ -16,22 +16,23 @@ export class CartService {
 
   addToCart(beer: Beer) {
 
-    // Clone beer object into newBeer
-    let newBeer = Object.assign({}, beer);
-
     // Iterate items looking for current beer there
     // If beer is already in cart, then increment quantity
     let alreadyInCart = false;
     this._items.forEach( (b: Beer) => {
-      if (b.name == newBeer.name) {
+      if (b.name == beer.name) {
         alreadyInCart = true;
-        b.quantity += newBeer.quantity;
+        b.quantity += beer.quantity;
       }
     });
 
     // If beer doesnt exist in cart, then add it
-    if (!alreadyInCart)
+    if (!alreadyInCart) {
+      // Clone beer object into newBeer
+      let newBeer = Object.assign({}, beer);
+
       this._items.push(newBeer);
+    }
 
 
     // this._items.push(beer);
