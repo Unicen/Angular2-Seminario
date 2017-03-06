@@ -4,7 +4,7 @@ import { Beer } from './beer-list/beer';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class BeerDataService {
+export class BeerDataService { 
 
   constructor(private http: Http) { }
 
